@@ -1,0 +1,117 @@
+
+import { Button } from "@/components/ui/button";
+import { GitHub, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+
+const HeroSection = () => {
+  const typingTextRef = useRef<HTMLSpanElement>(null);
+  
+  useEffect(() => {
+    if (typingTextRef.current) {
+      typingTextRef.current.classList.add("animate");
+    }
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    document.querySelectorAll(".section-fade-in").forEach((el) => {
+      observer.observe(el);
+    });
+    
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="home" className="min-h-screen flex items-center pt-20 pb-16">
+      <div className="container max-w-7xl mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div className="lg:col-span-3 space-y-8">
+            <div className="space-y-4">
+              <p className="text-primary font-mono text-lg section-fade-in">
+                Hi, my name is
+              </p>
+              <h1 className="text-4xl md:text-6xl font-bold section-fade-in" style={{ animationDelay: "0.2s" }}>
+                <span className="typing-container">
+                  <span className="typing-text" ref={typingTextRef}>
+                    Ishan Shah
+                  </span>
+                </span>
+              </h1>
+              <h2 className="text-3xl md:text-5xl font-bold text-foreground/70 section-fade-in" style={{ animationDelay: "0.4s" }}>
+                Cybersecurity Researcher
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.6s" }}>
+                I specialize in cybersecurity research with a focus on privacy, vulnerability assessment, and system resilience. Currently pursuing my B.Tech at Indian Institute of Technology Jodhpur.
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap gap-4 section-fade-in" style={{ animationDelay: "0.8s" }}>
+              <Button asChild size="lg" className="group">
+                <a href="#projects">
+                  View Projects
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <a href="#contact">Contact Me</a>
+              </Button>
+            </div>
+            
+            <div className="flex gap-4 section-fade-in" style={{ animationDelay: "1s" }}>
+              <Button variant="ghost" size="icon" asChild>
+                <a 
+                  href="https://github.com/ishan-shah" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
+                >
+                  <GitHub className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a 
+                  href="https://linkedin.com/in/ishan-shah"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
+                >
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <a 
+                  href="mailto:your-email@example.com"
+                  aria-label="Email Me"
+                >
+                  <Mail className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+          
+          <div className="lg:col-span-2 flex justify-center section-fade-in" style={{ animationDelay: "0.6s" }}>
+            <div className="relative w-64 h-64 md:w-80 md:h-80">
+              <div className="profile-photo w-full h-full animate-profile-float overflow-hidden">
+                <img 
+                  src="/lovable-uploads/7e22bb14-5442-4017-a140-db545f551b1e.png" 
+                  alt="Ishan Shah" 
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
