@@ -108,6 +108,65 @@
     transform: translateY(0);
   }
   
+  /* Wave animation for profile photo */
+  .wave-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .wave {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    width: 110%;
+    height: 110%;
+    animation: wave-animation 8s linear infinite;
+  }
+  
+  .wave1 {
+    border-color: rgba(0, 195, 255, 0.5);
+    animation-delay: 0s;
+    border-width: 3px;
+  }
+  
+  .wave2 {
+    border-color: rgba(170, 0, 255, 0.3);
+    animation-delay: -2s;
+    border-width: 6px;
+    width: 120%;
+    height: 120%;
+  }
+  
+  .wave3 {
+    border-color: rgba(0, 255, 255, 0.2);
+    animation-delay: -4s;
+    border-width: 8px;
+    width: 130%;
+    height: 130%;
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: scale(0.9) rotate(0deg);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1) rotate(180deg);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9) rotate(360deg);
+      opacity: 0.8;
+    }
+  }
+  
   /* Skill Bar Styles */
   .skill-bar {
     --skill-percent: 0%;
@@ -182,6 +241,8 @@
     position: relative;
     border-radius: 50%;
     overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
   }
   
   .profile-photo::after {

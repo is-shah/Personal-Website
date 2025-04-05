@@ -99,7 +99,17 @@ const HeroSection = () => {
           
           <div className="lg:col-span-2 flex justify-center section-fade-in" style={{ animationDelay: "0.6s" }}>
             <div className="relative w-64 h-64 md:w-80 md:h-80">
-              <div className="profile-photo w-full h-full animate-profile-float rounded-full overflow-hidden border-4 border-primary">
+              {/* Sound wave effect container */}
+              <div className="absolute inset-0 w-full h-full">
+                <div className="wave-container">
+                  <div className="wave wave1"></div>
+                  <div className="wave wave2"></div>
+                  <div className="wave wave3"></div>
+                </div>
+              </div>
+              
+              {/* Profile photo */}
+              <div className="profile-photo w-full h-full animate-profile-float rounded-full overflow-hidden border-4 border-primary relative z-10">
                 <img 
                   src="/lovable-uploads/800c70e9-d007-46e8-9067-05f6c0c2071c.png" 
                   alt="Ishan Shah" 
