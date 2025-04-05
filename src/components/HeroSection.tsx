@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -100,7 +101,7 @@ const HeroSection = () => {
             <div className="relative w-64 h-64 md:w-80 md:h-80">
               <div className="profile-photo w-full h-full animate-profile-float overflow-hidden">
                 <img 
-                  src="/lovable-uploads/7e22bb14-5442-4017-a140-db545f551b1e.png" 
+                  src="/lovable-uploads/800c70e9-d007-46e8-9067-05f6c0c2071c.png" 
                   alt="Ishan Shah" 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
