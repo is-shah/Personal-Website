@@ -1,8 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, GitHub, ArrowRight } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 type Project = {
   title: string;
@@ -147,7 +146,7 @@ const ProjectsSection = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      <GitHub className="mr-2 h-4 w-4" />
+                      <Github className="mr-2 h-4 w-4" />
                       Code
                     </a>
                   </Button>

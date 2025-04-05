@@ -1,6 +1,5 @@
-
 import { Button } from "@/components/ui/button";
-import { GitHub, Linkedin, Mail, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 const HeroSection = () => {
@@ -73,7 +72,7 @@ const HeroSection = () => {
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
                 >
-                  <GitHub className="h-5 w-5" />
+                  <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
