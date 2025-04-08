@@ -122,8 +122,8 @@ const projects: Project[] = [
 ];
 
 const ProjectsSection = () => {
-  const [filter, setFilter] = useState<"all" | "featured">("featured");
-  const [visibleProjects, setVisibleProjects] = useState<Project[]>([]);
+  const [filter, setFilter] = useState<"all" | "featured">("all"); // Changed default to "all" to display all projects initially
+  const [visibleProjects, setVisibleProjects] = useState<Project[]>(projects); // Initialize with all projects
   
   useEffect(() => {
     setVisibleProjects(
@@ -145,12 +145,17 @@ const ProjectsSection = () => {
       { threshold: 0.1 }
     );
     
-    document.querySelectorAll(".section-fade-in").forEach((el) => {
-      observer.observe(el);
-    });
+    // Add a delay to allow the DOM to update before observing elements
+    setTimeout(() => {
+      document.querySelectorAll(".section-fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    }, 100);
     
     return () => observer.disconnect();
-  }, []);
+  }, [visibleProjects]); // Added visibleProjects as a dependency
+
+  console.log("Visible projects:", visibleProjects.length); // Debug log to check if projects are being filtered
 
   return (
     <section id="projects" className="py-20">
@@ -179,7 +184,7 @@ const ProjectsSection = () => {
           {visibleProjects.map((project, index) => (
             <Card 
               key={index} 
-              className="project-card border border-border h-full flex flex-col section-fade-in"
+              className="project-card border border-border h-full flex flex-col section-fade-in opacity-100" // Added opacity-100 to ensure visibility
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {project.thumbnail && (
