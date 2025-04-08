@@ -7,6 +7,8 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 type Project = {
   title: string;
   description: string;
+  subtitle: string;
+  details: string[];
   image: string;
   technologies: string[];
   githubUrl?: string;
@@ -16,40 +18,71 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Silent Consent",
-    description: "OS-scale Research for defensive gaps and real world bypass in consent banners and policy pages across top websites.",
+    title: "Silent Consent: OAuth2 Risks",
+    subtitle: "Offensive Research | Defensive Gaps | Real World Bypass",
+    description: "Research on OAuth2 security flaws and validation of bypasses against domain whitelisting/blacklisting defenses.",
+    details: [
+      "Replicated & validated OAuth2 security flaws (including CWE-601) in controlled environment, weaponizing prior vulnerability reports.",
+      "Tested & confirmed 20+ bypass techniques against domain whitelisting/blacklisting defenses, documenting security gaps with MITRE T1071 mappings.",
+      "Compiled detailed technical report covering attack vectors and 2 mitigation strategies, including strict redirect URI and PKCE (RFC 7636)."
+    ],
     image: "/placeholder.svg",
-    technologies: ["OS Security", "Authentication Bypass", "CWE-401"],
+    technologies: ["OAuth2", "CWE-601", "Security Bypass", "MITRE T1071", "PKCE"],
     githubUrl: "https://github.com/Xclusive-Ishan/Silent-Consent-OAuth2-Risks",
     featured: true
   },
   {
-    title: "Cobalt Kitty & APT39 TTP Analysis",
-    description: "APT Campaign Analysis using MITRE ATT&CK Framework to identify and mitigate advanced persistent threats.",
+    title: "Cobalt Kitty & APT39: TTP Defense Matrix",
+    subtitle: "TTP Correlation | ATT&CK Framework | NIST CSF Compliance",
+    description: "Mapping of major APT campaigns using the MITRE ATT&CK framework for adversary behavior profiling.",
+    details: [
+      "Mapped 2 major APT campaigns (Cobalt Kitty & APT39) using the MITRE ATT&CK framework, analyzing 30+ TTPs for adversary behavior profiling.",
+      "Created comparative ATT&CK Navigator layers with risk scoring (0-4 scale) and SVG visualizations.",
+      "Developed actionable playbooks with NIST CSF mappings, shared as community resources."
+    ],
     image: "/placeholder.svg",
-    technologies: ["MITRE ATT&CK", "Threat Intelligence", "APT Analysis"],
+    technologies: ["MITRE ATT&CK", "Threat Intelligence", "NIST CSF", "APT Analysis", "Risk Scoring"],
     githubUrl: "https://github.com/Xclusive-Ishan/Cobalt-Kitty-APT39-TTP-Defense-Matrix",
     featured: true
   },
   {
-    title: "Attack Chain Honeypot Framework",
-    description: "Threat Emulation system with Protocol Analysis for Defensive Bypass detection, using containerized honeypots.",
+    title: "Attack-Chain Honeypot Framework",
+    subtitle: "Threat Emulation | Protocol Analysis | Defensive Bypass",
+    description: "Design and deployment of vulnerable honeypots in Docker for covert attacker profiling and security research.",
+    details: [
+      "Designed and deployed 4+ vulnerable honeypots in Docker, enabling covert attacker persistence, security evasion, and 100% untraceable operations.",
+      "Developed dynamic HTTP/HTTPS, SSH, FTP attack payloads using Flask & Socket Programming.",
+      "Simulated attacks across 5 protocols (SMB/DNS included) at 1,000+ RPS to test system resilience.",
+      "Exposed telemetry gaps in Cowrie/Dionaea through custom evasion techniques, creating detection blindspots."
+    ],
     image: "/placeholder.svg",
-    technologies: ["Honeypots", "Docker", "Network Security"],
+    technologies: ["Honeypots", "Docker", "Protocol Analysis", "Flask", "Socket Programming"],
     githubUrl: "https://github.com/Xclusive-Ishan/Honeypots-Beyond-Defense-Offensive-Potential.git",
     featured: true
   },
   {
     title: "Privacy Compliance Scanner",
     description: "ML-based tool that identifies inconsistencies between privacy consent banners and policy pages. Analyzes GDPR, CCPA & e-Directive compliance.",
+    subtitle: "NLP | Machine Learning | Privacy Analysis",
+    details: [
+      "Developed a machine learning model to detect compliance with key data privacy standards.",
+      "Implemented system to identify Personally Identifiable Information vulnerabilities.",
+      "Created comprehensive privacy analysis framework for web content."
+    ],
     image: "/placeholder.svg",
     technologies: ["Python", "NLP", "Machine Learning", "GDPR", "CCPA"],
     githubUrl: "https://github.com/Xclusive-Ishan",
-    featured: true
+    featured: false
   },
   {
     title: "Deceptive Content Detector",
     description: "ML-based system to detect deceptive horizons, misleading URLs and fraudulent content online.",
+    subtitle: "Machine Learning | Content Analysis | Fraud Detection",
+    details: [
+      "Built neural network model to identify deceptive web content.",
+      "Implemented URL analysis for phishing detection.",
+      "Created content classification system for suspicious materials."
+    ],
     image: "/placeholder.svg",
     technologies: ["Python", "Machine Learning", "Content Analysis"],
     githubUrl: "https://github.com/Xclusive-Ishan",
@@ -58,6 +91,12 @@ const projects: Project[] = [
   {
     title: "TTP Defense Matrix",
     description: "Open-source framework leveraging MITRE ATT&CK for detection, prevention and remediation of advanced threats.",
+    subtitle: "Threat Modeling | Security Framework | Mitigation Strategies",
+    details: [
+      "Developed comprehensive threat detection framework.",
+      "Implemented MITRE ATT&CK mappings for common attack vectors.",
+      "Created practical mitigation strategies for security teams."
+    ],
     image: "/placeholder.svg",
     technologies: ["MITRE ATT&CK", "Security", "Threat Modeling"],
     githubUrl: "https://github.com/Xclusive-Ishan",
@@ -128,9 +167,15 @@ const ProjectsSection = () => {
             >
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+                <p className="text-sm text-primary mt-1">{project.subtitle}</p>
+                <CardDescription className="mt-2">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="grow">
+                <ul className="list-disc pl-5 mb-4 space-y-2 text-sm">
+                  {project.details.map((detail, i) => (
+                    <li key={i} className="text-foreground/80">{detail}</li>
+                  ))}
+                </ul>
                 <div className="flex flex-wrap gap-2 mt-2">
                   {project.technologies.map((tech, i) => (
                     <span key={i} className="px-2 py-1 bg-secondary text-foreground/80 rounded-full text-xs">

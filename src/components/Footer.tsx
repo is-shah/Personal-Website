@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -42,6 +42,16 @@ const Footer = () => {
                 aria-label="Email Me"
               >
                 <Mail className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a 
+                href="https://www.quora.com/profile/Ishan-Shah-266"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Quora Profile"
+              >
+                <BookOpen className="h-4 w-4" />
               </a>
             </Button>
           </div>

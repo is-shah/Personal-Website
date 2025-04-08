@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 
 type ExperienceItem = {
@@ -15,7 +14,7 @@ const experiences: ExperienceItem[] = [
     title: "Research Intern",
     company: "IIT Bombay",
     location: "Bombay",
-    period: "Jan 2023 - Present",
+    period: "Dec 2024 - Present",
     description: [
       "First author on an NLP research paper identifying inconsistencies between consent banners and Policy Pages across top 1 million websites (Tranco).",
       "Developing a model to detect misleading practices in privacy policies and consent banners, ensuring compliance with 3 key data privacy standards: GDPR, CCPA & e-Directive.",
@@ -27,25 +26,13 @@ const experiences: ExperienceItem[] = [
     title: "Affiliate Research Intern",
     company: "Max Planck Institute for Informatics",
     location: "Germany",
-    period: "Jun 2022 - Dec 2022",
+    period: "Dec 2024 - Present",
     description: [
       "Developing an NLP-based web crawler to detect deceptive buttons, misleading URLs, and fraudulent content, enhancing Compliance Audits.",
       "Pipelining between different high complexity based models for enhanced detection.",
       "Implemented system to identify Personally Identifiable Information vulnerabilities, identifying privacy violations to enhance compliance frameworks."
     ],
     technologies: ["NLP", "Pipelining", "Compliance", "Crawlers", "Web Security"]
-  },
-  {
-    title: "Privacy & Compliance Researcher",
-    company: "Microsoft Interns",
-    location: "Joint Affiliation",
-    period: "Dec. 2021 - May 2022",
-    description: [
-      "First author on a NLP research paper identifying inconsistencies between consent banners and Policy Pages across top 1 million websites.",
-      "Developed a ML-based model to detect key data privacy standards: GDPR, CCPA & e-Directive.",
-      "Implemented system to identify Personally Identifiable Information, identifying 10+ new privacy violations to enhance compliance frameworks."
-    ],
-    technologies: ["NLP", "Machine Learning", "Privacy Analysis", "GDPR", "CCPA"]
   },
   {
     title: "Honeypot Framework Developer",
