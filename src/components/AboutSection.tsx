@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const AboutSection = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -73,15 +74,31 @@ const AboutSection = () => {
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">Vulnerability Assessment</span>
-                  <span>95%</span>
+                  <span className="font-medium">Penetration Testing</span>
+                  <span>Expert</span>
                 </div>
                 <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "95%" } as React.CSSProperties}></div>
               </div>
               
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">Penetration Testing</span>
+                  <span className="font-medium">Threat Analysis</span>
+                  <span>Advanced</span>
+                </div>
+                <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "85%" } as React.CSSProperties}></div>
+              </div>
+              
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">Security Research</span>
+                  <span>Advanced</span>
+                </div>
+                <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "80%" } as React.CSSProperties}></div>
+              </div>
+              
+              <div>
+                <div className="flex justify-between mb-1">
+                  <span className="font-medium">OffSec (Pentesting)</span>
                   <span>90%</span>
                 </div>
                 <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "90%" } as React.CSSProperties}></div>
@@ -89,23 +106,7 @@ const AboutSection = () => {
               
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">Security Research</span>
-                  <span>92%</span>
-                </div>
-                <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "92%" } as React.CSSProperties}></div>
-              </div>
-              
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span className="font-medium">Python</span>
-                  <span>88%</span>
-                </div>
-                <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "88%" } as React.CSSProperties}></div>
-              </div>
-              
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span className="font-medium">Threat Modeling</span>
+                  <span className="font-medium">Adversary Emulation</span>
                   <span>85%</span>
                 </div>
                 <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "85%" } as React.CSSProperties}></div>
@@ -113,23 +114,66 @@ const AboutSection = () => {
               
               <div>
                 <div className="flex justify-between mb-1">
-                  <span className="font-medium">Machine Learning</span>
+                  <span className="font-medium">GRC (NIST CSF)</span>
                   <span>80%</span>
                 </div>
                 <div className="skill-bar bg-secondary dark:bg-secondary/50" style={{ "--skill-percent": "80%" } as React.CSSProperties}></div>
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-2">
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">C/C++</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">JavaScript</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Bash</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">PostgreSQL</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">SQL</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Pytorch</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Adversary Emulation</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">MITRE ATT&CK</span>
-              <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Threat Intel</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+              <Card className="border border-border">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Languages</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Python</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">C</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">C++</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">JavaScript</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">Bash</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">PowerShell</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm">SQL</span>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <Card className="border border-border">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Certifications</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <p className="text-sm">TryHackMe Junior Web Pentester</p>
+                  <p className="text-sm">Google Cybersecurity Certified Professional (ongoing)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="border border-border">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Operating Systems</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-2">
+                  <p className="text-sm">• Linux (Kali, Ubuntu)</p>
+                  <p className="text-sm">• Windows (Server, Active Directory)</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="border border-border">
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-lg">Cybersecurity Tools</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Burp Suite</span>
+                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Metasploit</span>
+                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Nmap</span>
+                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Wireshark</span>
+                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Nessus</span>
+                    <span className="px-2 py-1 bg-primary/10 text-primary rounded-full text-xs">Splunk</span>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

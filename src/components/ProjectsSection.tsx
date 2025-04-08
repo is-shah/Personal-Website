@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,34 +16,34 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Silent Consent",
+    description: "OS-scale Research for defensive gaps and real world bypass in consent banners and policy pages across top websites.",
+    image: "/placeholder.svg",
+    technologies: ["OS Security", "Authentication Bypass", "CWE-401"],
+    githubUrl: "https://github.com",
+    featured: true
+  },
+  {
+    title: "Cobalt Kitty & APT39 TTP Analysis",
+    description: "APT Campaign Analysis using MITRE ATT&CK Framework to identify and mitigate advanced persistent threats.",
+    image: "/placeholder.svg",
+    technologies: ["MITRE ATT&CK", "Threat Intelligence", "APT Analysis"],
+    githubUrl: "https://github.com",
+    featured: true
+  },
+  {
+    title: "Attack Chain Honeypot Framework",
+    description: "Threat Emulation system with Protocol Analysis for Defensive Bypass detection, using containerized honeypots.",
+    image: "/placeholder.svg",
+    technologies: ["Honeypots", "Docker", "Network Security"],
+    githubUrl: "https://github.com",
+    featured: true
+  },
+  {
     title: "Privacy Compliance Scanner",
     description: "ML-based tool that identifies inconsistencies between privacy consent banners and policy pages. Analyzes GDPR, CCPA & e-Directive compliance.",
     image: "/placeholder.svg",
     technologies: ["Python", "NLP", "Machine Learning", "GDPR", "CCPA"],
-    githubUrl: "https://github.com",
-    featured: true
-  },
-  {
-    title: "OAuth2 Security Analyzer",
-    description: "Tool for analyzing and identifying security flaws in OAuth2 implementations, with focus on parameter stealing techniques.",
-    image: "/placeholder.svg",
-    technologies: ["OAuth2", "Security", "Python", "Web Security"],
-    githubUrl: "https://github.com",
-    featured: true
-  },
-  {
-    title: "TTP Defense Matrix",
-    description: "Open-source framework leveraging MITRE ATT&CK for detection, prevention and remediation of advanced threats.",
-    image: "/placeholder.svg",
-    technologies: ["MITRE ATT&CK", "Security", "Threat Modeling"],
-    githubUrl: "https://github.com",
-    featured: true
-  },
-  {
-    title: "Docker Honeypot Framework",
-    description: "Scalable Docker-based honeypot system with 40+ vulnerable services for covert attacker profiling and analysis.",
-    image: "/placeholder.svg",
-    technologies: ["Docker", "Security", "Honeypot", "Network Analysis"],
     githubUrl: "https://github.com",
     featured: true
   },
@@ -55,10 +56,10 @@ const projects: Project[] = [
     featured: false
   },
   {
-    title: "Attack Chain Simulator",
-    description: "Simulation framework for modeling and testing various attack chains across different protocols.",
+    title: "TTP Defense Matrix",
+    description: "Open-source framework leveraging MITRE ATT&CK for detection, prevention and remediation of advanced threats.",
     image: "/placeholder.svg",
-    technologies: ["Security", "Simulation", "Network Protocols"],
+    technologies: ["MITRE ATT&CK", "Security", "Threat Modeling"],
     githubUrl: "https://github.com",
     featured: false
   }

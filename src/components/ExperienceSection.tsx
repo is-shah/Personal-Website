@@ -12,10 +12,34 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
+    title: "Research Intern",
+    company: "IIT Bombay",
+    location: "Bombay",
+    period: "Jan 2023 - Present",
+    description: [
+      "First author on an NLP research paper identifying inconsistencies between consent banners and Policy Pages across top 1 million websites (Tranco).",
+      "Developing a model to detect misleading practices in privacy policies and consent banners, ensuring compliance with 3 key data privacy standards: GDPR, CCPA & e-Directive.",
+      "Conducting Research on Sensitive Personally Identifiable Information, identifying 10+ new privacy violations to improve data handling practices."
+    ],
+    technologies: ["Privacy Compliance", "NLP", "ANLI (Adversarial Natural Language Inference)", "GRC Framework", "Docker"]
+  },
+  {
+    title: "Affiliate Research Intern",
+    company: "Max Planck Institute for Informatics",
+    location: "Germany",
+    period: "Jun 2022 - Dec 2022",
+    description: [
+      "Developing an NLP-based web crawler to detect deceptive buttons, misleading URLs, and fraudulent content, enhancing Compliance Audits.",
+      "Pipelining between different high complexity based models for enhanced detection.",
+      "Implemented system to identify Personally Identifiable Information vulnerabilities, identifying privacy violations to enhance compliance frameworks."
+    ],
+    technologies: ["NLP", "Pipelining", "Compliance", "Crawlers", "Web Security"]
+  },
+  {
     title: "Privacy & Compliance Researcher",
     company: "Microsoft Interns",
     location: "Joint Affiliation",
-    period: "Dec. 2024 - Present",
+    period: "Dec. 2021 - May 2022",
     description: [
       "First author on a NLP research paper identifying inconsistencies between consent banners and Policy Pages across top 1 million websites.",
       "Developed a ML-based model to detect key data privacy standards: GDPR, CCPA & e-Directive.",
@@ -24,36 +48,10 @@ const experiences: ExperienceItem[] = [
     technologies: ["NLP", "Machine Learning", "Privacy Analysis", "GDPR", "CCPA"]
   },
   {
-    title: "OAauth2 Broke",
+    title: "Honeypot Framework Developer",
     company: "GitHub",
     location: "Remote",
-    period: "Mar. 2023",
-    description: [
-      "Registered & validated OAuth2 security flaws (including CVE - 601) in controlled environment, weaponizing parameter stealing techniques.",
-      "Developed proof of concept attacks against OAuth2 authorization flows, enhancing defense strategies.",
-      "Collaborated with MITRE TIAFT companies to identify attack vectors and mitigate concerns.",
-      "Created in-depth technical report covering attack vectors and 2 mitigation strategies, including strict redirect URI and server-side validation."
-    ],
-    technologies: ["OAuth2", "Security Analysis", "MITRE TIAFT", "Vulnerability Assessment"]
-  },
-  {
-    title: "TTP Defense Matrix",
-    company: "GitHub",
-    location: "Remote",
-    period: "Mar. 2023",
-    description: [
-      "Created and contributed to Open-Source TTP defense matrix project using the MITRE ATT&CK framework.",
-      "Implemented detection, prevention and remediation techniques for IKE/IPsec adversary behavior profiling.",
-      "Simulated attacks across 5 protocols with DNS, HTTPS at 1,000+ RPS to test system resilience.",
-      "Deployed telemetry gaps in Event Schema testing through packet manipulation, raising detection thresholds."
-    ],
-    technologies: ["MITRE ATT&CK", "TTP Defense", "IKE/IPsec", "Protocol Analysis"]
-  },
-  {
-    title: "Honeypot Framework",
-    company: "GitHub",
-    location: "Remote",
-    period: "Feb. 2023",
+    period: "Feb. 2021 - Nov. 2021",
     description: [
       "Created and deployed 40+ vulnerable honeypots in Docker, enabling covert attacker profiling.",
       "Implemented HTTP(S) server with self-signed SSL/TLS for session monitoring & packet capture.",
