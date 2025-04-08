@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="flex gap-4">
             <Button variant="ghost" size="icon" asChild>
               <a 
-                href="https://github.com/ishan-shah" 
+                href="https://github.com/Xclusive-Ishan" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="GitHub Profile"
@@ -28,7 +28,7 @@ const Footer = () => {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a 
-                href="https://linkedin.com/in/ishan-shah" 
+                href="https://www.linkedin.com/in/ishan-shah-6a1584287" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="LinkedIn Profile"
@@ -38,7 +38,7 @@ const Footer = () => {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a 
-                href="mailto:ishan_shah@example.com"
+                href="mailto:Ishanshah.iit@gmail.com"
                 aria-label="Email Me"
               >
                 <Mail className="h-4 w-4" />

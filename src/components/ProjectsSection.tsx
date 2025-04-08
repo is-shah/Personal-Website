@@ -20,7 +20,7 @@ const projects: Project[] = [
     description: "OS-scale Research for defensive gaps and real world bypass in consent banners and policy pages across top websites.",
     image: "/placeholder.svg",
     technologies: ["OS Security", "Authentication Bypass", "CWE-401"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Xclusive-Ishan/Silent-Consent-OAuth2-Risks",
     featured: true
   },
   {
@@ -28,7 +28,7 @@ const projects: Project[] = [
     description: "APT Campaign Analysis using MITRE ATT&CK Framework to identify and mitigate advanced persistent threats.",
     image: "/placeholder.svg",
     technologies: ["MITRE ATT&CK", "Threat Intelligence", "APT Analysis"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Xclusive-Ishan/Cobalt-Kitty-APT39-TTP-Defense-Matrix",
     featured: true
   },
   {
@@ -36,7 +36,7 @@ const projects: Project[] = [
     description: "Threat Emulation system with Protocol Analysis for Defensive Bypass detection, using containerized honeypots.",
     image: "/placeholder.svg",
     technologies: ["Honeypots", "Docker", "Network Security"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Xclusive-Ishan/Honeypots-Beyond-Defense-Offensive-Potential.git",
     featured: true
   },
   {
@@ -44,7 +44,7 @@ const projects: Project[] = [
     description: "ML-based tool that identifies inconsistencies between privacy consent banners and policy pages. Analyzes GDPR, CCPA & e-Directive compliance.",
     image: "/placeholder.svg",
     technologies: ["Python", "NLP", "Machine Learning", "GDPR", "CCPA"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Xclusive-Ishan",
     featured: true
   },
   {
@@ -52,7 +52,7 @@ const projects: Project[] = [
     description: "ML-based system to detect deceptive horizons, misleading URLs and fraudulent content online.",
     image: "/placeholder.svg",
     technologies: ["Python", "Machine Learning", "Content Analysis"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Xclusive-Ishan",
     featured: false
   },
   {
@@ -60,7 +60,7 @@ const projects: Project[] = [
     description: "Open-source framework leveraging MITRE ATT&CK for detection, prevention and remediation of advanced threats.",
     image: "/placeholder.svg",
     technologies: ["MITRE ATT&CK", "Security", "Threat Modeling"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/Xclusive-Ishan",
     featured: false
   }
 ];
@@ -172,7 +172,7 @@ const ProjectsSection = () => {
         <div className="mt-12 text-center section-fade-in">
           <Button asChild variant="outline" size="lg" className="group">
             <a 
-              href="https://github.com/ishan-shah" 
+              href="https://github.com/Xclusive-Ishan" 
               target="_blank" 
               rel="noopener noreferrer"
             >

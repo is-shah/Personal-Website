@@ -49,7 +49,13 @@ const HeroSection = () => {
                 Cybersecurity Researcher
               </h2>
               <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.6s" }}>
-                I specialize in cybersecurity research with a focus on privacy, vulnerability assessment, and system resilience. Currently pursuing my B.Tech at Indian Institute of Technology Jodhpur.
+                Hi, I'm Ishan Shah — a cybersecurity researcher passionate about privacy, system resilience, and ethical defense. Currently a B.Tech student at IIT Jodhpur, I'm a Research Intern at IIT Bombay & Max Planck Institute (Germany), where I work on global privacy compliance and adversarial risk.
+              </p>
+              <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.7s" }}>
+                I thrive on identifying vulnerabilities, breaking silos between offensive and defensive security, and building systems that truly protect.
+              </p>
+              <p className="text-lg font-bold text-primary section-fade-in" style={{ animationDelay: "0.8s" }}>
+                Let's secure the digital world — one byte at a time.
               </p>
             </div>
             
@@ -68,7 +74,7 @@ const HeroSection = () => {
             <div className="flex gap-4 section-fade-in" style={{ animationDelay: "1s" }}>
               <Button variant="ghost" size="icon" asChild>
                 <a 
-                  href="https://github.com/ishan-shah" 
+                  href="https://github.com/Xclusive-Ishan" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
@@ -78,7 +84,7 @@ const HeroSection = () => {
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a 
-                  href="https://linkedin.com/in/ishan-shah"
+                  href="https://www.linkedin.com/in/ishan-shah-6a1584287"
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
@@ -88,7 +94,7 @@ const HeroSection = () => {
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a 
-                  href="mailto:your-email@example.com"
+                  href="mailto:Ishanshah.iit@gmail.com"
                   aria-label="Email Me"
                 >
                   <Mail className="h-5 w-5" />

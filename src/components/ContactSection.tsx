@@ -71,7 +71,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-foreground/70">ishan_shah@example.com</p>
+                  <p className="text-foreground/70">Ishanshah.iit@gmail.com</p>
                 </div>
               </div>
               
@@ -87,9 +87,9 @@ const ContactSection = () => {
             </div>
             
             <div className="flex gap-4">
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="outline" size="icon" asChild className="hover:border-primary hover:text-primary">
                 <a 
-                  href="https://github.com/ishan-shah" 
+                  href="https://github.com/Xclusive-Ishan" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
@@ -97,14 +97,24 @@ const ContactSection = () => {
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
-              <Button variant="outline" size="icon" asChild>
+              <Button variant="outline" size="icon" asChild className="hover:border-primary hover:text-primary">
                 <a 
-                  href="https://linkedin.com/in/ishan-shah" 
+                  href="https://www.linkedin.com/in/ishan-shah-6a1584287" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
                 >
                   <Linkedin className="h-5 w-5" />
+                </a>
+              </Button>
+              <Button variant="outline" size="icon" asChild className="hover:border-primary hover:text-primary">
+                <a 
+                  href="https://www.quora.com/profile/Ishan-Shah-266" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label="Quora Profile"
+                >
+                  <span className="font-bold text-lg">Q</span>
                 </a>
               </Button>
             </div>

@@ -108,7 +108,7 @@
     transform: translateY(0);
   }
   
-  /* Wave animation for profile photo */
+  /* Wave animation for profile photo - ENHANCED */
   .wave-container {
     position: absolute;
     width: 100%;
@@ -125,8 +125,8 @@
     position: absolute;
     border-radius: 50%;
     border: 2px solid transparent;
-    width: 130%;
-    height: 130%;
+    width: 150%;
+    height: 150%;
     animation: wave-animation 8s linear infinite;
   }
   
@@ -134,24 +134,24 @@
     border-color: rgba(0, 195, 255, 0.5);
     animation-delay: 0s;
     border-width: 4px;
-    width: 140%;
-    height: 140%;
+    width: 160%;
+    height: 160%;
   }
   
   .wave2 {
     border-color: rgba(170, 0, 255, 0.3);
     animation-delay: -2s;
     border-width: 7px;
-    width: 160%;
-    height: 160%;
+    width: 180%;
+    height: 180%;
   }
   
   .wave3 {
     border-color: rgba(0, 255, 255, 0.2);
     animation-delay: -4s;
     border-width: 10px;
-    width: 180%;
-    height: 180%;
+    width: 200%;
+    height: 200%;
   }
   
   @keyframes wave-animation {
@@ -274,5 +274,35 @@
   
   .typing-text.animate {
     animation: typing 3.5s steps(40, end) forwards, blink 1s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(var(--primary)) }
+  }
+  
+  @keyframes skill-fill {
+    from { width: 0 }
+    to { width: var(--skill-percent) }
+  }
+  
+  @keyframes pulse-border {
+    0% { 
+      border-color: rgba(0, 195, 255, 0.6);
+      transform: scale(1); 
+    }
+    50% { 
+      border-color: rgba(0, 195, 255, 0.3);
+      transform: scale(1.05); 
+    }
+    100% { 
+      border-color: rgba(0, 195, 255, 0.6);
+      transform: scale(1); 
+    }
   }
 }
