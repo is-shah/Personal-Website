@@ -5,11 +5,16 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 type Project = {
+  id?: number;
   title: string;
   description: string;
-  subtitle: string;
-  details: string[];
-  image: string;
+  subtitle?: string;
+  details?: string[];
+  problem?: string;
+  solution?: string;
+  outcome?: string;
+  image?: string;
+  thumbnail?: string;
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -26,7 +31,11 @@ const projects: Project[] = [
       "Tested & confirmed 20+ bypass techniques against domain whitelisting/blacklisting defenses, documenting security gaps with MITRE T1071 mappings.",
       "Compiled detailed technical report covering attack vectors and 2 mitigation strategies, including strict redirect URI and PKCE (RFC 7636)."
     ],
+    problem: "Conducted research on silent consent authentication issues including CWE-401 in controlled environments.",
+    solution: "Tested and confirmed 20+ bypass techniques against domain whitelisting/blacklisting defenses, documenting security gaps.",
+    outcome: "Documented security gaps and bypass techniques against various authentication systems.",
     image: "/placeholder.svg",
+    thumbnail: "/lovable-uploads/ab6f9129-d796-492b-9558-45980593c6c9.png",
     technologies: ["OAuth2", "CWE-601", "Security Bypass", "MITRE T1071", "PKCE"],
     githubUrl: "https://github.com/Xclusive-Ishan/Silent-Consent-OAuth2-Risks",
     featured: true
@@ -40,7 +49,11 @@ const projects: Project[] = [
       "Created comparative ATT&CK Navigator layers with risk scoring (0-4 scale) and SVG visualizations.",
       "Developed actionable playbooks with NIST CSF mappings, shared as community resources."
     ],
+    problem: "Need to analyze advanced persistent threat campaigns using structured frameworks.",
+    solution: "Mapped 2 major APT campaigns (Cobalt Kitty & APT39) using the MITRE ATT&CK framework, analyzing tactics and techniques.",
+    outcome: "Created comparative ATT&CK Navigator maps with risk scoring and NVD visualizations.",
     image: "/placeholder.svg",
+    thumbnail: "/lovable-uploads/3c79db40-83b2-45af-985e-f258407ed24f.png",
     technologies: ["MITRE ATT&CK", "Threat Intelligence", "NIST CSF", "APT Analysis", "Risk Scoring"],
     githubUrl: "https://github.com/Xclusive-Ishan/Cobalt-Kitty-APT39-TTP-Defense-Matrix",
     featured: true
@@ -55,7 +68,11 @@ const projects: Project[] = [
       "Simulated attacks across 5 protocols (SMB/DNS included) at 1,000+ RPS to test system resilience.",
       "Exposed telemetry gaps in Cowrie/Dionaea through custom evasion techniques, creating detection blindspots."
     ],
+    problem: "Need for more advanced honeypot systems to detect and analyze attacker behavior.",
+    solution: "Built advanced yet believable honeypot network in Docker, enabling precise attacker persistence and security evasion monitoring.",
+    outcome: "Developed dynamic HTTP/HTTPS, SSH, FTP attack payloads and expanded telemetry gaps using custom modules for increased detection.",
     image: "/placeholder.svg",
+    thumbnail: "/lovable-uploads/19ee7e1b-0760-4090-b3dd-a246bea36861.png",
     technologies: ["Honeypots", "Docker", "Protocol Analysis", "Flask", "Socket Programming"],
     githubUrl: "https://github.com/Xclusive-Ishan/Honeypots-Beyond-Defense-Offensive-Potential.git",
     featured: true
@@ -165,6 +182,15 @@ const ProjectsSection = () => {
               className="project-card border border-border h-full flex flex-col section-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              {project.thumbnail && (
+                <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
+                  <img 
+                    src={project.thumbnail} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+              )}
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <p className="text-sm text-primary mt-1">{project.subtitle}</p>
@@ -172,7 +198,7 @@ const ProjectsSection = () => {
               </CardHeader>
               <CardContent className="grow">
                 <ul className="list-disc pl-5 mb-4 space-y-2 text-sm">
-                  {project.details.map((detail, i) => (
+                  {project.details && project.details.map((detail, i) => (
                     <li key={i} className="text-foreground/80">{detail}</li>
                   ))}
                 </ul>
