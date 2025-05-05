@@ -29,12 +29,8 @@ const ResumeSection = () => {
           <div className="w-16 h-1 bg-primary mb-8 section-fade-in"></div>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="section-fade-in">
-            {/* Removed text and Download Resume button */}
-          </div>
-          
-          <div className="border border-border rounded-lg overflow-hidden shadow-lg mx-auto section-fade-in">
+        <div className="flex justify-center">
+          <div className="border border-border rounded-lg overflow-hidden shadow-lg max-w-2xl section-fade-in">
             <img 
               src="/lovable-uploads/89d526ba-14a7-44a5-a587-ddd400979063.png" 
               alt="Ishan Shah Resume" 

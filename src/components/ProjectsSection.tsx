@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -34,7 +35,7 @@ const projects: Project[] = [
     solution: "Tested and confirmed 20+ bypass techniques against domain whitelisting/blacklisting defenses, documenting security gaps.",
     outcome: "Documented security gaps and bypass techniques against various authentication systems.",
     image: "/placeholder.svg",
-    thumbnail: "/lovable-uploads/ab6f9129-d796-492b-9558-45980593c6c9.png",
+    thumbnail: "/lovable-uploads/087da942-1e78-4b26-878e-ef1d6257a4f0.png",
     technologies: ["OAuth2", "CWE-601", "Security Bypass", "MITRE T1071", "PKCE"],
     githubUrl: "https://github.com/Xclusive-Ishan/Silent-Consent-OAuth2-Risks",
     featured: true
@@ -52,7 +53,7 @@ const projects: Project[] = [
     solution: "Mapped 2 major APT campaigns (Cobalt Kitty & APT39) using the MITRE ATT&CK framework, analyzing tactics and techniques.",
     outcome: "Created comparative ATT&CK Navigator maps with risk scoring and NVD visualizations.",
     image: "/placeholder.svg",
-    thumbnail: "/lovable-uploads/3c79db40-83b2-45af-985e-f258407ed24f.png",
+    thumbnail: "/lovable-uploads/7c37dcc7-1524-494f-87ac-305d65263faf.png",
     technologies: ["MITRE ATT&CK", "Threat Intelligence", "NIST CSF", "APT Analysis", "Risk Scoring"],
     githubUrl: "https://github.com/Xclusive-Ishan/Cobalt-Kitty-APT39-TTP-Defense-Matrix",
     featured: true
@@ -71,7 +72,7 @@ const projects: Project[] = [
     solution: "Built advanced yet believable honeypot network in Docker, enabling precise attacker persistence and security evasion monitoring.",
     outcome: "Developed dynamic HTTP/HTTPS, SSH, FTP attack payloads and expanded telemetry gaps using custom modules for increased detection.",
     image: "/placeholder.svg",
-    thumbnail: "/lovable-uploads/19ee7e1b-0760-4090-b3dd-a246bea36861.png",
+    thumbnail: "/lovable-uploads/7e789164-6c54-4ca4-9da5-5244adaf4b99.png",
     technologies: ["Honeypots", "Docker", "Protocol Analysis", "Flask", "Socket Programming"],
     githubUrl: "https://github.com/Xclusive-Ishan/Honeypots-Beyond-Defense-Offensive-Potential.git",
     featured: true
@@ -79,8 +80,8 @@ const projects: Project[] = [
 ];
 
 const ProjectsSection = () => {
-  const [filter, setFilter] = useState<"all" | "featured">("all"); // Changed default to "all" to display all projects initially
-  const [visibleProjects, setVisibleProjects] = useState<Project[]>(projects); // Initialize with all projects
+  const [filter, setFilter] = useState<"all" | "featured">("all");
+  const [visibleProjects, setVisibleProjects] = useState<Project[]>(projects);
   
   useEffect(() => {
     setVisibleProjects(
@@ -110,9 +111,9 @@ const ProjectsSection = () => {
     }, 100);
     
     return () => observer.disconnect();
-  }, [visibleProjects]); // Added visibleProjects as a dependency
+  }, [visibleProjects]);
 
-  console.log("Visible projects:", visibleProjects.length); // Debug log to check if projects are being filtered
+  console.log("Visible projects:", visibleProjects.length);
 
   return (
     <section id="projects" className="py-20">
@@ -141,7 +142,7 @@ const ProjectsSection = () => {
           {visibleProjects.map((project, index) => (
             <Card 
               key={index} 
-              className="project-card border border-border h-full flex flex-col section-fade-in opacity-100" // Added opacity-100 to ensure visibility
+              className="project-card border border-border h-full flex flex-col section-fade-in opacity-100"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {project.thumbnail && (
