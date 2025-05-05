@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import AchievementsSection from "@/components/AchievementsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -50,6 +51,7 @@ const Index = () => {
         <AchievementsSection />
         <ExperienceSection />
         <ProjectsSection />
+        <ResumeSection />
         <ContactSection />
       </main>
       <Footer />

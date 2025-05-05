@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 
 type ExperienceItem = {
@@ -33,19 +34,6 @@ const experiences: ExperienceItem[] = [
       "Implemented system to identify Personally Identifiable Information vulnerabilities, identifying privacy violations to enhance compliance frameworks."
     ],
     technologies: ["NLP", "Pipelining", "Compliance", "Crawlers", "Web Security"]
-  },
-  {
-    title: "Honeypot Framework Developer",
-    company: "GitHub",
-    location: "Remote",
-    period: "Feb. 2021 - Nov. 2021",
-    description: [
-      "Created and deployed 40+ vulnerable honeypots in Docker, enabling covert attacker profiling.",
-      "Implemented HTTP(S) server with self-signed SSL/TLS for session monitoring & packet capture.",
-      "Simulated attacks across 5 protocols with DNS, HTTPS to test system resilience.",
-      "Deployed telemetry in Event Schema format, enabling detailed detection and analysis."
-    ],
-    technologies: ["Docker", "Honeypot Development", "HTTP/HTTPS", "SSL/TLS", "Packet Analysis"]
   }
 ];
 

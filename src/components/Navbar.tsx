@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MoonIcon, SunIcon, Menu, X } from "lucide-react";
@@ -13,7 +12,7 @@ const navLinks: NavLink[] = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
+  { name: "Resume", href: "#resume" },
   { name: "Contact", href: "#contact" },
 ];
 
