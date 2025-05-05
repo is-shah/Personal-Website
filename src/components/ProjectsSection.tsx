@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -76,48 +75,6 @@ const projects: Project[] = [
     technologies: ["Honeypots", "Docker", "Protocol Analysis", "Flask", "Socket Programming"],
     githubUrl: "https://github.com/Xclusive-Ishan/Honeypots-Beyond-Defense-Offensive-Potential.git",
     featured: true
-  },
-  {
-    title: "Privacy Compliance Scanner",
-    description: "ML-based tool that identifies inconsistencies between privacy consent banners and policy pages. Analyzes GDPR, CCPA & e-Directive compliance.",
-    subtitle: "NLP | Machine Learning | Privacy Analysis",
-    details: [
-      "Developed a machine learning model to detect compliance with key data privacy standards.",
-      "Implemented system to identify Personally Identifiable Information vulnerabilities.",
-      "Created comprehensive privacy analysis framework for web content."
-    ],
-    image: "/placeholder.svg",
-    technologies: ["Python", "NLP", "Machine Learning", "GDPR", "CCPA"],
-    githubUrl: "https://github.com/Xclusive-Ishan",
-    featured: false
-  },
-  {
-    title: "Deceptive Content Detector",
-    description: "ML-based system to detect deceptive horizons, misleading URLs and fraudulent content online.",
-    subtitle: "Machine Learning | Content Analysis | Fraud Detection",
-    details: [
-      "Built neural network model to identify deceptive web content.",
-      "Implemented URL analysis for phishing detection.",
-      "Created content classification system for suspicious materials."
-    ],
-    image: "/placeholder.svg",
-    technologies: ["Python", "Machine Learning", "Content Analysis"],
-    githubUrl: "https://github.com/Xclusive-Ishan",
-    featured: false
-  },
-  {
-    title: "TTP Defense Matrix",
-    description: "Open-source framework leveraging MITRE ATT&CK for detection, prevention and remediation of advanced threats.",
-    subtitle: "Threat Modeling | Security Framework | Mitigation Strategies",
-    details: [
-      "Developed comprehensive threat detection framework.",
-      "Implemented MITRE ATT&CK mappings for common attack vectors.",
-      "Created practical mitigation strategies for security teams."
-    ],
-    image: "/placeholder.svg",
-    technologies: ["MITRE ATT&CK", "Security", "Threat Modeling"],
-    githubUrl: "https://github.com/Xclusive-Ishan",
-    featured: false
   }
 ];
 

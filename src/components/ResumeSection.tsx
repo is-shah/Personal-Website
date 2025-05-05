@@ -1,7 +1,5 @@
 
 import { useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 
 const ResumeSection = () => {
   useEffect(() => {
@@ -33,17 +31,10 @@ const ResumeSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="section-fade-in">
-            <p className="text-lg mb-6">
-              View my complete resume below or download a copy for your records.
-            </p>
-            
-            <Button size="lg" className="group">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+            {/* Removed text and Download Resume button */}
           </div>
           
-          <div className="border border-border rounded-lg overflow-hidden shadow-lg section-fade-in">
+          <div className="border border-border rounded-lg overflow-hidden shadow-lg mx-auto section-fade-in">
             <img 
               src="/lovable-uploads/89d526ba-14a7-44a5-a587-ddd400979063.png" 
               alt="Ishan Shah Resume" 

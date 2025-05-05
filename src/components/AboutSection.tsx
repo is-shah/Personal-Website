@@ -36,6 +36,16 @@ const AboutSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleDownloadResume = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/lovable-uploads/89d526ba-14a7-44a5-a587-ddd400979063.png';
+    link.download = 'ishan_shah_resume.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="py-20">
       <div className="container max-w-7xl mx-auto px-4 md:px-8">
@@ -59,11 +69,9 @@ const AboutSection = () => {
             </div>
             
             <div className="section-fade-in">
-              <Button asChild>
-                <a href="/resume.pdf" download>
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </a>
+              <Button onClick={handleDownloadResume}>
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
               </Button>
             </div>
           </div>
