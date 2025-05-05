@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
     title: "Affiliate Research Intern",
     company: "Max Planck Institute for Informatics",
     location: "Germany",
-    period: "Dec 2024 - Present",
+    period: "May 2025 - Present",
     description: [
       "Developing an NLP-based web crawler to detect deceptive buttons, misleading URLs, and fraudulent content, enhancing Compliance Audits.",
       "Pipelining between different high complexity based models for enhanced detection.",
