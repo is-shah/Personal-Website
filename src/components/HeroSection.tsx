@@ -49,10 +49,10 @@ const HeroSection = () => {
                 Cybersecurity Researcher
               </h2>
               <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.6s" }}>
-                Hi, I'm Ishan Shah — a cybersecurity researcher passionate about privacy, system resilience, and ethical defense. Currently a B.Tech student at IIT Jodhpur, I'm a Research Intern at IIT Bombay & Max Planck Institute (Germany), where I work on global privacy compliance and adversarial risk.
+                Hi, I'm Ishan Shah — a cybersecurity researcher driven by a deep passion for privacy, system resilience, and ethical defense. I'm currently pursuing my B.Tech at IIT Jodhpur and actively collaborating with leading research institutions like IIT Bombay and the Max Planck Institute for Informatics, Germany, on projects related to global privacy compliance and adversarial risk.
               </p>
               <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.7s" }}>
-                I thrive on identifying vulnerabilities, breaking silos between offensive and defensive security, and building systems that truly protect.
+                I love being part of communities that push the boundaries of cybersecurity — uniting offensive and defensive strategies to build systems that genuinely protect.
               </p>
               <p className="text-lg font-bold text-primary section-fade-in" style={{ animationDelay: "0.8s" }}>
                 Let's secure the digital world — one byte at a time.
