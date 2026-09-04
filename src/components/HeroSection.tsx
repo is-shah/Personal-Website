@@ -1,16 +1,11 @@
 
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { Mail, Github, Linkedin } from "lucide-react";
+import profileAsset from "@/assets/profile.jpg.asset.json";
 
 const HeroSection = () => {
-  const typingTextRef = useRef<HTMLSpanElement>(null);
-  
   useEffect(() => {
-    if (typingTextRef.current) {
-      typingTextRef.current.classList.add("animate");
-    }
-    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -21,105 +16,87 @@ const HeroSection = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     document.querySelectorAll(".section-fade-in").forEach((el) => {
       observer.observe(el);
     });
-    
+
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 pb-16">
-      <div className="container max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-          <div className="lg:col-span-3 space-y-8">
-            <div className="space-y-4">
-              <p className="text-primary font-mono text-lg section-fade-in">
-                Hi, my name is
+    <section
+      id="home"
+      className="min-h-screen flex items-center py-24 md:py-32"
+    >
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="order-2 lg:order-1 section-fade-in">
+            <p className="text-sm font-mono text-muted-foreground mb-4 tracking-wide uppercase">
+              Research Scholar · INET Lab, MPII · Saarbrücken, DE
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 leading-tight">
+              Hi, I’m Ishan Shah
+            </h1>
+            <div className="space-y-5 text-lg text-foreground/80 leading-relaxed max-w-xl">
+              <p>
+                I’m a cybersecurity researcher driven by a deep passion for
+                privacy, system resilience, and ethical defense. I’m currently
+                pursuing my B.Tech at IIT Jodhpur and actively collaborating
+                with leading research institutions like IIT Bombay and the Max
+                Planck Institute for Informatics, Germany, on projects related
+                to global privacy compliance and adversarial risk.
               </p>
-              <h1 className="text-4xl md:text-6xl font-bold section-fade-in" style={{ animationDelay: "0.2s" }}>
-                <span className="typing-container">
-                  <span className="typing-text" ref={typingTextRef}>
-                    Ishan Shah
-                  </span>
-                </span>
-              </h1>
-              <h2 className="text-3xl md:text-5xl font-bold text-foreground/70 section-fade-in" style={{ animationDelay: "0.4s" }}>
-                Cybersecurity Researcher
-              </h2>
-              <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.6s" }}>
-                Hi, I'm Ishan Shah — a cybersecurity researcher driven by a deep passion for privacy, system resilience, and ethical defense. I'm currently pursuing my B.Tech at IIT Jodhpur and actively collaborating with leading research institutions like IIT Bombay and the Max Planck Institute for Informatics, Germany, on projects related to global privacy compliance and adversarial risk.
+              <p>
+                My work sits at the intersection of privacy theory and
+                real-world Web behavior — understanding how emerging AI and Web
+                functionality interact with regulatory frameworks, and what
+                accountability means when privacy protections fail.
               </p>
-              <p className="text-lg text-foreground/70 max-w-xl section-fade-in" style={{ animationDelay: "0.7s" }}>
-                I love being part of communities that push the boundaries of cybersecurity — uniting offensive and defensive strategies to build systems that genuinely protect.
-              </p>
-              <p className="text-lg font-bold text-primary section-fade-in" style={{ animationDelay: "0.8s" }}>
-                Let's secure the digital world — one byte at a time.
+              <p>
+                I love being part of communities that push the boundaries of
+                cybersecurity — uniting offensive and defensive strategies to
+                build systems that genuinely protect.
               </p>
             </div>
-            
-            <div className="flex flex-wrap gap-4 section-fade-in" style={{ animationDelay: "0.8s" }}>
-              <Button asChild size="lg" className="group">
-                <a href="#projects">
-                  View Projects
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <Button asChild>
+                <a href="mailto:Ishanshah.iit@gmail.com">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Get in touch
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="#contact">Contact Me</a>
-              </Button>
-            </div>
-            
-            <div className="flex gap-4 section-fade-in" style={{ animationDelay: "1s" }}>
-              <Button variant="ghost" size="icon" asChild>
-                <a 
-                  href="https://github.com/Xclusive-Ishan" 
-                  target="_blank" 
+              <Button variant="outline" size="icon" asChild>
+                <a
+                  href="https://github.com/Xclusive-Ishan"
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
                 >
-                  <Github className="h-5 w-5" />
+                  <Github className="h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a 
+              <Button variant="outline" size="icon" asChild>
+                <a
                   href="https://www.linkedin.com/in/ishan-shah-6a1584287"
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
                 >
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="ghost" size="icon" asChild>
-                <a 
-                  href="mailto:Ishanshah.iit@gmail.com"
-                  aria-label="Email Me"
-                >
-                  <Mail className="h-5 w-5" />
+                  <Linkedin className="h-4 w-4" />
                 </a>
               </Button>
             </div>
           </div>
-          
-          <div className="lg:col-span-2 flex justify-center section-fade-in" style={{ animationDelay: "0.6s" }}>
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
-              {/* Sound wave effect container */}
-              <div className="absolute inset-0 w-full h-full">
-                <div className="wave-container">
-                  <div className="wave wave1"></div>
-                  <div className="wave wave2"></div>
-                  <div className="wave wave3"></div>
-                </div>
-              </div>
-              
-              {/* Profile photo */}
-              <div className="profile-photo w-full h-full animate-profile-float rounded-full overflow-hidden border-4 border-primary relative z-10">
-                <img 
-                  src="/lovable-uploads/800c70e9-d007-46e8-9067-05f6c0c2071c.png" 
-                  alt="Ishan Shah" 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end section-fade-in">
+            <div className="relative">
+              <div className="profile-photo w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                <img
+                  src={profileAsset.url}
+                  alt="Ishan Shah at the Max Planck Institute for Informatics"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
