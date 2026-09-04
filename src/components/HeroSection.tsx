@@ -40,23 +40,45 @@ const HeroSection = () => {
             </h1>
             <div className="space-y-5 text-lg text-foreground/80 leading-relaxed max-w-xl">
               <p>
-                I’m a cybersecurity researcher driven by a deep passion for
-                privacy, system resilience, and ethical defense. I’m currently
-                pursuing my B.Tech at IIT Jodhpur and actively collaborating
-                with leading research institutions like IIT Bombay and the Max
-                Planck Institute for Informatics, Germany, on projects related
-                to global privacy compliance and adversarial risk.
+                I am a Research Scholar at the Max Planck Institute for
+                Informatics, working in the INET Lab under the supervision of
+                Prof. Anja Feldmann. Previously, I worked with IIT Bombay’s
+                Trust Lab under Prof. Devashish Gosain, where I worked on web
+                privacy and privacy compliance across specific jurisdictions at
+                scale.
               </p>
               <p>
-                My work sits at the intersection of privacy theory and
-                real-world Web behavior — understanding how emerging AI and Web
-                functionality interact with regulatory frameworks, and what
-                accountability means when privacy protections fail.
+                I am currently looking for a PhD position. My research revolves
+                around a crucial question in privacy: how privacy looks on paper
+                and in theory versus what actually happens when those principles
+                are applied across the Web and real-world digital systems.
               </p>
               <p>
-                I love being part of communities that push the boundaries of
-                cybersecurity — uniting offensive and defensive strategies to
-                build systems that genuinely protect.
+                In particular, I am interested in understanding how emerging
+                technologies and new functionalities, especially those involving
+                AI, are becoming part of the Web at scale, and how this
+                introduces new gaps in regulatory frameworks intended to protect
+                user privacy. I am also interested in questions of
+                accountability across Web services—particularly understanding
+                where responsibility lies when privacy protections fail, an area
+                that remains relatively underexplored and difficult to study
+                systematically.
+              </p>
+              <p>
+                Beyond research, I enjoy reaching out to different people,
+                building new connections, and understanding how the world works
+                from different perspectives. I like talking to people, learning
+                about different cultures, and travelling to different countries.
+              </p>
+              <p>
+                By the way, I am currently on a streak of visiting new
+                countries. I am planning to visit the Netherlands in December,
+                so if you happen to be around, I would love to meet and talk!
+              </p>
+              <p>
+                If you work in similar areas and would like to know more about
+                my work, I would be more than happy to connect. Feel free to
+                reach out by email and get in touch.
               </p>
             </div>
 
@@ -92,7 +114,7 @@ const HeroSection = () => {
 
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end section-fade-in">
             <div className="relative">
-              <div className="profile-photo w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <div className="profile-photo w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                 <img
                   src={profileImage}
                   alt="Ishan Shah at the Max Planck Institute for Informatics"
