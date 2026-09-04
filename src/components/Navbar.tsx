@@ -13,6 +13,7 @@ const navLinks: NavLinkItem[] = [
   { name: "Home", href: "/" },
   { name: "Background", href: "/background" },
   { name: "Experiences", href: "/journey" },
+  { name: "Publications", href: "/publications" },
   { name: "CV", href: "/cv" },
 ];
 

@@ -8,6 +8,7 @@ import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
 import Background from "@/pages/Background";
 import Journey from "@/pages/Journey";
+import Publications from "@/pages/Publications";
 import CV from "@/pages/CV";
 import NotFound from "./pages/NotFound";
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route index element={<Home />} />
             <Route path="background" element={<Background />} />
             <Route path="journey" element={<Journey />} />
+            <Route path="publications" element={<Publications />} />
             <Route path="cv" element={<CV />} />
           </Route>
           <Route path="*" element={<NotFound />} />
