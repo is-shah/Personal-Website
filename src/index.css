@@ -3,69 +3,69 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    
+    --background: 0 0% 98%;
+    --foreground: 220 15% 20%;
+
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    
+    --card-foreground: 220 15% 20%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    
-    --primary: 196 100% 50%;
-    --primary-foreground: 210 40% 98%;
-    
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
-    
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
-    
-    --accent: 196 100% 50%;
-    --accent-foreground: 222 47% 11%;
-    
+    --popover-foreground: 220 15% 20%;
+
+    --primary: 220 15% 25%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 13% 94%;
+    --secondary-foreground: 220 15% 20%;
+
+    --muted: 220 13% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 220 13% 90%;
+    --accent-foreground: 220 15% 20%;
+
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 84% 5%;
-    
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 220 15% 25%;
+
     --radius: 0.5rem;
   }
-  
+
   .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-    
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
-    
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-    
-    --primary: 196 100% 50%;
-    --primary-foreground: 222 47% 11%;
-    
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    
-    --accent: 196 100% 50%;
-    --accent-foreground: 210 40% 98%;
-    
+    --background: 220 15% 12%;
+    --foreground: 220 10% 92%;
+
+    --card: 220 15% 15%;
+    --card-foreground: 220 10% 92%;
+
+    --popover: 220 15% 15%;
+    --popover-foreground: 220 10% 92%;
+
+    --primary: 0 0% 92%;
+    --primary-foreground: 220 15% 12%;
+
+    --secondary: 220 13% 20%;
+    --secondary-foreground: 220 10% 92%;
+
+    --muted: 220 13% 20%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 220 13% 22%;
+    --accent-foreground: 220 10% 92%;
+
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive-foreground: 220 10% 92%;
+
+    --border: 220 13% 22%;
+    --input: 220 13% 22%;
+    --ring: 220 10% 80%;
   }
 }
 
@@ -73,236 +73,72 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     @apply scroll-smooth scroll-pt-20;
   }
-  
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-  
-  [data-theme="light"] body {
-    background-image: radial-gradient(circle at center, rgba(160, 217, 250, 0.1) 0%, rgba(160, 217, 250, 0) 70%);
-  }
-  
-  [data-theme="dark"] body {
-    background-image: radial-gradient(circle at center, rgba(10, 25, 47, 0.2) 0%, rgba(10, 25, 47, 0) 70%);
-  }
-  
+
   /* Smooth scrolling effect */
   html.smooth-scroll {
     scroll-behavior: smooth;
   }
-  
-  /* Section animations */
+
+  /* Section animations - subtle */
   .section-fade-in {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  
+
   .section-fade-in.visible {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  /* Wave animation for profile photo - ENHANCED */
-  .wave-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-    overflow: hidden;
-  }
-  
-  .wave {
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    width: 150%;
-    height: 150%;
-    animation: wave-animation 8s linear infinite;
-  }
-  
-  .wave1 {
-    border-color: rgba(0, 195, 255, 0.5);
-    animation-delay: 0s;
-    border-width: 4px;
-    width: 160%;
-    height: 160%;
-  }
-  
-  .wave2 {
-    border-color: rgba(170, 0, 255, 0.3);
-    animation-delay: -2s;
-    border-width: 7px;
-    width: 180%;
-    height: 180%;
-  }
-  
-  .wave3 {
-    border-color: rgba(0, 255, 255, 0.2);
-    animation-delay: -4s;
-    border-width: 10px;
-    width: 200%;
-    height: 200%;
-  }
-  
-  @keyframes wave-animation {
-    0% {
-      transform: scale(0.95) rotate(0deg);
-      opacity: 0.8;
-    }
-    50% {
-      transform: scale(1.05) rotate(180deg);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(0.95) rotate(360deg);
-      opacity: 0.8;
-    }
-  }
-  
-  /* Skill Bar Styles */
-  .skill-bar {
-    --skill-percent: 0%;
-    position: relative;
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .skill-bar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: var(--skill-percent);
-    background-color: hsl(var(--primary));
-    border-radius: 4px;
-  }
-  
-  .skill-bar.animate::before {
-    animation: skill-fill 1s ease-out forwards;
-  }
-  
-  /* Project card hover effects */
+
+  /* Project card hover effects - subtle */
   .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px -12px rgba(0, 0, 0, 0.12);
   }
-  
-  /* Cursor effects */
-  .cursor-effect {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid hsla(var(--primary));
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s;
-  }
-  
+
   /* Sliding underline animation for links */
   .hover-underline-animation {
     position: relative;
   }
-  
+
   .hover-underline-animation::after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 1.5px;
     bottom: -2px;
     left: 0;
     background-color: hsl(var(--primary));
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
   }
-  
+
   .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  
-  /* Profile photo effects */
+
+  /* Profile photo - clean subtle border */
   .profile-photo {
     position: relative;
     border-radius: 50%;
     overflow: hidden;
     z-index: 2;
-    box-shadow: 0 0 15px rgba(0, 195, 255, 0.6);
-  }
-  
-  .profile-photo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    animation: pulse-border 2s infinite;
-  }
-  
-  /* Typing animation container */
-  .typing-container {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .typing-text {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid hsl(var(--primary));
-    width: 0;
-  }
-  
-  .typing-text.animate {
-    animation: typing 3.5s steps(40, end) forwards, blink 1s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  @keyframes blink {
-    from, to { border-color: transparent }
-    50% { border-color: hsl(var(--primary)) }
-  }
-  
-  @keyframes skill-fill {
-    from { width: 0 }
-    to { width: var(--skill-percent) }
-  }
-  
-  @keyframes pulse-border {
-    0% { 
-      border-color: rgba(0, 195, 255, 0.6);
-      transform: scale(1); 
-    }
-    50% { 
-      border-color: rgba(0, 195, 255, 0.3);
-      transform: scale(1.05); 
-    }
-    100% { 
-      border-color: rgba(0, 195, 255, 0.6);
-      transform: scale(1); 
-    }
+    box-shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.15);
   }
 }
