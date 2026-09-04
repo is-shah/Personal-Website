@@ -2,6 +2,7 @@
 import HeroSection from "@/components/HeroSection";
 import Background from "@/pages/Background";
 import Journey from "@/pages/Journey";
+import Publications from "@/pages/Publications";
 import CV from "@/pages/CV";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <HeroSection />
       <Background />
       <Journey />
+      <Publications />
       <CV />
     </div>
   );
