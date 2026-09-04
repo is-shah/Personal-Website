@@ -114,7 +114,7 @@ const HeroSection = () => {
 
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end section-fade-in">
             <div className="relative">
-              <div className="profile-photo w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <div className="profile-photo w-72 h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
                 <img
                   src={profileImage}
                   alt="Ishan Shah at the Max Planck Institute for Informatics"
