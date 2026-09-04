@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, Github, Linkedin } from "lucide-react";
-import profileAsset from "@/assets/profile.jpg.asset.json";
+const profileImage = "/lovable-uploads/449b0b54-ea79-4ea7-bf34-e9992351c4d2.jpg";
 
 const HeroSection = () => {
   useEffect(() => {
@@ -94,7 +94,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="profile-photo w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
                 <img
-                  src={profileAsset.url}
+                  src={profileImage}
                   alt="Ishan Shah at the Max Planck Institute for Informatics"
                   className="w-full h-full object-cover"
                 />

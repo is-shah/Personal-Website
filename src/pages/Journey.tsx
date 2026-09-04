@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
-import mem1Asset from "@/assets/mem1.jpg.asset.json";
-import mem2Asset from "@/assets/mem2.jpg.asset.json";
+const mem1Image = "/lovable-uploads/b4523937-a5a2-46bc-8e21-c820cc658f6e.jpg";
+const mem2Image = "/lovable-uploads/081ca96f-5332-4e52-92a7-8c5c1c0015ed.jpg";
 
 const Journey = () => {
   useEffect(() => {
@@ -25,14 +25,14 @@ const Journey = () => {
 
   const memories = [
     {
-      image: mem1Asset.url,
+      image: mem1Image,
       alt: "Ishan Shah at the Max Planck Institute for Informatics",
       title: "At MPII",
       story:
         "Stepping into the Max Planck Institute for Informatics felt like entering a quiet intersection of curiosity and rigor. The long corridors, the impromptu whiteboard discussions, and the late-evening debugging sessions taught me that the best research happens when you’re willing to sit with a problem longer than feels comfortable.",
     },
     {
-      image: mem2Asset.url,
+      image: mem2Image,
       alt: "Evening view of the MPII campus courtyard",
       title: "Saarbrücken Evenings",
       story:
