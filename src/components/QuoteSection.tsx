@@ -23,7 +23,7 @@ const QuoteSection = () => {
 
   return (
     <section className="py-16 bg-secondary/30">
-      <div className="container max-w-5xl mx-auto px-4 md:px-8">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
         <blockquote className="relative text-center">
           <div className="text-6xl text-primary/30 font-serif absolute top-0 left-0">"</div>
           <p className="text-xl md:text-2xl italic text-foreground/90 pt-6 px-10 section-fade-in">

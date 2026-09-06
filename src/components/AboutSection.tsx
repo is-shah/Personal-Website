@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
+const cvFile = `${import.meta.env.BASE_URL}Ishan_Shah_CV.pdf`;
+
 const AboutSection = () => {
   const skillsRef = useRef<HTMLDivElement>(null);
 
@@ -37,10 +39,9 @@ const AboutSection = () => {
   }, []);
 
   const handleDownloadResume = () => {
-    // Create a link element
     const link = document.createElement('a');
-    link.href = '/lovable-uploads/89d526ba-14a7-44a5-a587-ddd400979063.png';
-    link.download = 'ishan_shah_resume.png';
+    link.href = cvFile;
+    link.download = 'Ishan_Shah_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -48,7 +49,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="py-20">
-      <div className="container max-w-7xl mx-auto px-4 md:px-8">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-4 section-fade-in">🚀 About Me</h2>
           <div className="w-16 h-1 bg-primary mb-8 section-fade-in"></div>

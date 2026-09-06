@@ -29,7 +29,7 @@ const Publications = () => {
       authors: "Ishan Shah, Ali Rasaii, Anja Feldmann, Devashish Gosain, Ha Dao.",
       venue:
         "Accepted for publication in the proceedings of the ACM International Conference on emerging Networking EXperiments and Technologies (CoNEXT 2026).",
-      link: "#",
+      link: "https://dl.acm.org/doi/10.1145/3830388",
       linkText: "Paper",
     },
     {
@@ -43,13 +43,12 @@ const Publications = () => {
 
   return (
     <section className="py-24 md:py-32">
-      <div className="container max-w-4xl mx-auto px-4 md:px-8">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
         <div className="mb-16 section-fade-in">
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-4">
             Publications
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
-            A selection of my research work in web privacy, tracking, and privacy compliance.
           </p>
         </div>
 

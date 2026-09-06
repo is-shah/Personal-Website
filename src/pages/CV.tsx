@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
+const cvFile = `${import.meta.env.BASE_URL}Ishan_Shah_CV.pdf`;
+
 const CV = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,8 +27,8 @@ const CV = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/lovable-uploads/89d526ba-14a7-44a5-a587-ddd400979063.png";
-    link.download = "ishan_shah_resume.png";
+    link.href = cvFile;
+    link.download = "Ishan_Shah_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -41,8 +43,6 @@ const CV = () => {
               Curriculum Vitae
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              A concise overview of my academic background, research
-              experience, and technical work.
             </p>
           </div>
           <Button
@@ -55,20 +55,19 @@ const CV = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 section-fade-in">
-          <div className="border border-border rounded-lg overflow-hidden bg-card shadow-sm">
-            <img
-              src="/lovable-uploads/89d526ba-14a7-44a5-a587-ddd400979063.png"
-              alt="Ishan Shah CV page 1"
-              className="w-full h-auto"
-              loading="lazy"
-            />
-          </div>
-          <div className="border border-border rounded-lg overflow-hidden bg-card shadow-sm flex items-center justify-center bg-muted/30 min-h-[400px]">
-            <p className="text-muted-foreground text-center px-8">
-              Page 2 placeholder — replace with the second page of your CV
-              when available.
-            </p>
+        <div className="max-w-4xl border border-border rounded-lg bg-card shadow-sm section-fade-in">
+          <div className="h-[min(78vh,900px)] min-h-[560px] overflow-y-auto bg-muted/30">
+            <object
+              data={cvFile}
+              type="application/pdf"
+              aria-label="Ishan Shah CV"
+              className="h-full min-h-[900px] w-full"
+            >
+              <p className="p-6 text-muted-foreground">
+                The CV preview is unavailable in this browser. Use the download
+                button above to open the PDF.
+              </p>
+            </object>
           </div>
         </div>
       </div>

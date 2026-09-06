@@ -117,7 +117,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-20">
-      <div className="container max-w-7xl mx-auto px-4 md:px-8">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-4 section-fade-in">Projects</h2>
           <div className="w-16 h-1 bg-primary mb-8 section-fade-in"></div>
@@ -146,11 +146,11 @@ const ProjectsSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {project.thumbnail && (
-                <div className="relative w-full h-48 overflow-hidden rounded-t-lg">
+                <div className="relative w-full rounded-t-md bg-muted/30">
                   <img 
                     src={project.thumbnail} 
                     alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    className="block w-full h-auto object-contain"
                   />
                 </div>
               )}

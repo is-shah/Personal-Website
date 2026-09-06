@@ -25,7 +25,7 @@ const AchievementsSection = () => {
 
   return (
     <section id="achievements" className="py-20">
-      <div className="container max-w-7xl mx-auto px-4 md:px-8">
+      <div className="container max-w-6xl mx-auto px-4 md:px-8">
         <div className="mb-12">
           <h2 className="text-3xl font-bold mb-4 section-fade-in">Achievements & Leadership</h2>
           <div className="w-16 h-1 bg-primary mb-8 section-fade-in"></div>
